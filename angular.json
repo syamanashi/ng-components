@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "ng-components-syamanashi": {
+      "root": "projects/ng-components-syamanashi",
+      "sourceRoot": "projects/ng-components-syamanashi/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-components-syamanashi/tsconfig.lib.json",
+            "project": "projects/ng-components-syamanashi/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-components-syamanashi/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-components-syamanashi/src/test.ts",
+            "tsConfig": "projects/ng-components-syamanashi/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-components-syamanashi/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-components-syamanashi/tsconfig.lib.json",
+              "projects/ng-components-syamanashi/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-components"
