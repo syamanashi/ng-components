@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ng-components-syamanashi',
+  selector: 'ss-hacker-status',
   template: `
     <p>
       ng-components-syamanashi works!
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: []
 })
-export class NgComponentsSyamanashiComponent implements OnInit {
+export class HackerStatusComponent implements OnInit {
 
   constructor() { }
 

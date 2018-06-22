@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { NgComponentsSyamanashiComponent } from './ng-components-syamanashi.component';
+import { HackerStatusComponent } from './hacker-status/hacker-status.component';
+
 
 @NgModule({
   imports: [
   ],
-  declarations: [NgComponentsSyamanashiComponent],
-  exports: [NgComponentsSyamanashiComponent]
+  declarations: [HackerStatusComponent],
+  exports: [HackerStatusComponent]
 })
 export class NgComponentsSyamanashiModule { }

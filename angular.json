@@ -130,7 +130,7 @@
       "root": "projects/ng-components-syamanashi",
       "sourceRoot": "projects/ng-components-syamanashi/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "ss",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
