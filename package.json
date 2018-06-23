@@ -8,6 +8,8 @@
     "test": "ng test",
     "test:lib": "jest",
     "test:lib:watch": "jest --watch",
+    "build:lib": "ng build ng-components-syamanashi --prod",
+    "publish:lib": "npm publish dist/ng-components-syamanashi",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
