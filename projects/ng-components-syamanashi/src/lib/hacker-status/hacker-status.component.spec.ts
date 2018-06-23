@@ -1,26 +1,68 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {Component} from '@angular/core';
+import {HackerStatusComponent} from './hacker-status.component';
+import { By } from '@angular/platform-browser';
 
-import { HackerStatusComponent } from './hacker-status.component';
+@Component({
+  template: `
+      <ss-hacker-status [status]="appStatus"></ss-hacker-status>
+    `,
+})
+class TestHostComponent {
+  appStatus: string;
+}
 
 describe('HackerStatusComponent', () => {
-  let component: HackerStatusComponent;
-  let fixture: ComponentFixture<HackerStatusComponent>;
+  let testHost: TestHostComponent;
+  let fixture: ComponentFixture<TestHostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HackerStatusComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        HackerStatusComponent,
+        TestHostComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HackerStatusComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture = TestBed.createComponent(TestHostComponent);
+    testHost = fixture.componentInstance;
+    // fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-    // expect(component).toBeFalsy();
+    expect(testHost).toBeTruthy();
   });
+
+  it(`should set pulse color to green when input is 'safe'`, () => {
+    testHost.appStatus = 'safe';
+    fixture.detectChanges();
+
+    const pulseEl: HTMLElement = fixture.debugElement.query(By.css('.pulse')).nativeElement;
+
+    expect(pulseEl.classList).toContain('green');
+  });
+
+  it(`should set pulse color to green when input is 'safe' (using snapshot testing)`, () => {
+    testHost.appStatus = 'safe';
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it(`should set pulse color to red when input is 'danger' (using snapshot testing)`, () => {
+    testHost.appStatus = 'danger';
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
+
+  it(`should set pulse color to yellow when input is 'warning' (using snapshot testing)`, () => {
+    testHost.appStatus = 'warning';
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
+
 });

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HackerStatusComponent should set pulse color to green when input is 'safe' (using snapshot testing) 1`] = `
+<ng-component
+  appStatus={[Function String]}
+>
+  <ss-hacker-status
+    ng-reflect-status="safe"
+  >
+    <div
+      class="status-pulse"
+    >
+      <span
+        class="pulse green"
+        ng-reflect-klass="pulse"
+        ng-reflect-ng-class="green"
+      />
+      <span
+        class="dot green"
+        ng-reflect-klass="dot"
+        ng-reflect-ng-class="green"
+      />
+    </div>
+  </ss-hacker-status>
+</ng-component>
+`;
+
+exports[`HackerStatusComponent should set pulse color to red when input is 'danger' (using snapshot testing) 1`] = `
+<ng-component
+  appStatus={[Function String]}
+>
+  <ss-hacker-status
+    ng-reflect-status="danger"
+  >
+    <div
+      class="status-pulse"
+    >
+      <span
+        class="pulse red"
+        ng-reflect-klass="pulse"
+        ng-reflect-ng-class="red"
+      />
+      <span
+        class="dot red"
+        ng-reflect-klass="dot"
+        ng-reflect-ng-class="red"
+      />
+    </div>
+  </ss-hacker-status>
+</ng-component>
+`;
+
+exports[`HackerStatusComponent should set pulse color to yellow when input is 'warning' (using snapshot testing) 1`] = `
+<ng-component
+  appStatus={[Function String]}
+>
+  <ss-hacker-status
+    ng-reflect-status="warning"
+  >
+    <div
+      class="status-pulse"
+    >
+      <span
+        class="pulse yellow"
+        ng-reflect-klass="pulse"
+        ng-reflect-ng-class="yellow"
+      />
+      <span
+        class="dot yellow"
+        ng-reflect-klass="dot"
+        ng-reflect-ng-class="yellow"
+      />
+    </div>
+  </ss-hacker-status>
+</ng-component>
+`;
