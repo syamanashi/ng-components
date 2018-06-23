@@ -65,4 +65,11 @@ describe('HackerStatusComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
+  it(`should set pulse color to yellow when input is undefined/null (using snapshot testing)`, () => {
+    testHost.appStatus = null;
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
+
 });
