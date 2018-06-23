@@ -74,3 +74,26 @@ exports[`HackerStatusComponent should set pulse color to yellow when input is 'w
   </ss-hacker-status>
 </ng-component>
 `;
+
+exports[`HackerStatusComponent should set pulse color to yellow when input is undefined/null (using snapshot testing) 1`] = `
+<ng-component
+  appStatus="null"
+>
+  <ss-hacker-status>
+    <div
+      class="status-pulse"
+    >
+      <span
+        class="pulse yellow"
+        ng-reflect-klass="pulse"
+        ng-reflect-ng-class="yellow"
+      />
+      <span
+        class="dot yellow"
+        ng-reflect-klass="dot"
+        ng-reflect-ng-class="yellow"
+      />
+    </div>
+  </ss-hacker-status>
+</ng-component>
+`;
